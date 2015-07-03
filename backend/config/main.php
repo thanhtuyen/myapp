@@ -11,7 +11,12 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'auth' => [
+            'class' => 'app\modules\auth\Module',
+        ],
+    ],
+
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
@@ -29,6 +34,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+
     ],
     'params' => $params,
 ];
