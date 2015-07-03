@@ -39,7 +39,7 @@ class PostsController extends Controller
 
                             $module                 = Yii::$app->controller->module->id;
                             $action                 = Yii::$app->controller->action->id;
-                            $controller         = Yii::$app->controller->id;
+                            $controller             = Yii::$app->controller->id;
                             $route                     = "$module/$controller/$action";
                             $post = Yii::$app->request->post();
                             if (\Yii::$app->user->can($route)) {
@@ -48,7 +48,8 @@ class PostsController extends Controller
                         }
                 ],
             ],
-        ];         return $behaviors;
+        ];
+        return $behaviors;
     }
     /**
      * Lists all Posts models.

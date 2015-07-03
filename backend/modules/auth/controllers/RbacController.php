@@ -82,16 +82,7 @@ class RbacController extends Controller
         $auth->addChild($admin, $delete);
     }
 
-    public function actionAssigment()
-    {
-        $auth = Yii::$app->authManager;
 
-        $author = $auth->createRole('author');
-        $admin = $auth->createRole('admin');
-
-        $auth->assign($author, 2);
-        $auth->assign($admin, 1);
-    }
     /**
      * Lists all AuthItem models.
      * @return mixed
